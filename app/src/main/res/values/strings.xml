@@ -3,4 +3,8 @@
     <string name="index_TextView_Longitude_Test">经度：</string>
     <string name="index_TextView_Latitude_Test">纬度：</string>
     <string name="index_Button_Signup">签到</string>
+
+    <string name="login_TextView_Account">账户</string>
+    <string name="login_TextView_Password">密码</string>
+    <string name="login_Button_Login">登陆</string>
 </resources>

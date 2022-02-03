@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.baidu.location.LocationClient;
+
 public class IndexActivity extends AppCompatActivity {
 
     @Override
