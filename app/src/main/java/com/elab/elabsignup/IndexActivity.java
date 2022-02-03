@@ -13,7 +13,7 @@ public class IndexActivity extends AppCompatActivity {
 
     public LocationListener locationListener = new LocationListener();
     public LocationClient mLocationClient = null;
-    public LocationClientOption mLocationClientOption;
+    public LocationClientOption mLocationClientOption = new LocationClientOption();
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
@@ -28,7 +28,7 @@ public class IndexActivity extends AppCompatActivity {
         mLocationClientOption.setCoorType("bd0911");
         mLocationClientOption.setScanSpan(1000);
         mLocationClient.start();
-        updateLocationTextView();
+//        updateLocationTextView();
     }
     public void updateLocationTextView(){
         mIndexTextViewLongitude.setText(locationListener.longitude.toString());
