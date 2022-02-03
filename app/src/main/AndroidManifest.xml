@@ -9,12 +9,12 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ElabSignup">
+        android:theme="@style/Theme.ElabSignup"
+        android:allowBackup="true">
         <meta-data android:name="com.baidu.lbsapi.API_KEY"
             android:value="0wBwvUCL7N4HpptOFZGlgBrEyzOfSeHh"/>
         <service android:name="com.baidu.location.f"
