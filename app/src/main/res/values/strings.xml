@@ -3,4 +3,18 @@
     <string name="index_TextView_Longitude_Test">经度：</string>
     <string name="index_TextView_Latitude_Test">纬度：</string>
     <string name="index_Button_Signup">签到</string>
+
+    <string name="login_TextView_Account">账户</string>
+    <string name="login_TextView_Password">密码</string>
+    <string name="login_Button_Login">登陆</string>
+    
+    <string name="index_Toast_SuccessWithoutGPS">基站定位成功,GPS定位失败</string>
+    <string name="index_Toast_SuccessWithoutWifi">基站定位成功,Wifi定位失败</string>
+    <string name="index_Toast_FailWithoutBase">定位失败,手机信号强度太弱</string>
+    <string name="index_Toast_FailWithoutData">定位失败,未返回位置数据</string>
+    <string name="index_Toast_FailWithoutBaseAndWifi">定位失败,SIM卡或Wifi功能异常</string>
+    <string name="index_Toast_FailWithoutSimAndWifi">定位失败,未检测到SIM卡和Wifi</string>
+    <string name="index_Toast_FailWithFlightMode">定位失败,飞行模式下无法定位</string>
+    <string name="index_Toast_FailWithoutAccess">定位失败,无法获取任何定位依据</string>
+    <string name="index_Toast_FailWithoutPermission">定位失败,未打开定位开关或赋予权限</string>
 </resources>
