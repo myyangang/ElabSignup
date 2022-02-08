@@ -1,4 +1,4 @@
-package com.elab.elabsignup.signup;
+package com.elab.elabsignup.event;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -27,7 +27,7 @@ public class SignupEventList {
         mContext = context.getApplicationContext();
         mDatabase = new SignupSQLiteHelper(mContext).getWritableDatabase();
     }
-    
+
     public static SignupEventList get(Context context){
         if(sSignupEventList == null){
             sSignupEventList = new SignupEventList(context);

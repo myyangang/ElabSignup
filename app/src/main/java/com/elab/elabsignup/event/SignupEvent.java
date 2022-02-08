@@ -1,4 +1,4 @@
-package com.elab.elabsignup.signup;
+package com.elab.elabsignup.event;
 
 import com.baidu.location.BDLocation;
 
