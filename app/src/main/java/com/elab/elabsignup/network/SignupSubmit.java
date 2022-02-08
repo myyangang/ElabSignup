@@ -1,4 +1,4 @@
-package com.elab.elabsignup;
+package com.elab.elabsignup.network;
 
 import android.net.Uri;
 
