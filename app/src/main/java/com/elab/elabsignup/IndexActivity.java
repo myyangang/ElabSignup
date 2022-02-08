@@ -2,6 +2,8 @@ package com.elab.elabsignup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -91,6 +93,22 @@ public class IndexActivity extends AppCompatActivity {
                 startLocate();
             }
         });
+    }
+
+    @Override public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.activity_index,menu);
+        return true;
+    }
+
+    @Override public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case R.id.JumpToLogin:
+                return true;
+            case R.id.JumpToLogView:
+                return true;
+            default:
+                return true;
+        }
     }
 
     /* 开始定位 */

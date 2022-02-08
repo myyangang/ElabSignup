@@ -5,10 +5,12 @@
     <string name="index_TextView_Longitude_Test">经度：</string>
     <string name="index_TextView_Latitude_Test">纬度：</string>
     <string name="index_Button_Signup">签到</string>
+    <string name="index_Menu_Login">登录账户</string>
+    <string name="index_Menu_LogView">查看日志</string>
 
     <string name="login_EditText_AccountHint">请输入账户</string>
     <string name="login_EditText_PasswordHint">请输入密码</string>
-    <string name="login_Button_Login">登陆</string>
+    <string name="login_Button_Login">登录</string>
     
     <string name="index_Toast_SuccessWithoutGPS">基站定位成功,GPS定位失败</string>
     <string name="index_Toast_SuccessWithoutWifi">基站定位成功,Wifi定位失败</string>
