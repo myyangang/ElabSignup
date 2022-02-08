@@ -2,6 +2,8 @@ package com.elab.elabsignup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +13,8 @@ import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.elab.elabsignup.event.SignupEvent;
+import com.elab.elabsignup.event.SignupEventList;
 
 public class IndexActivity extends AppCompatActivity {
     // 导入组件
@@ -19,8 +23,7 @@ public class IndexActivity extends AppCompatActivity {
     private Button mIndexButtonSignup;
 
     // 引入实例字段
-
-    // 最远38.88603860274705, 121.53223304167209
+    private SignupEventList mSignupEventList;
     private LocationClient mLocationClient = null;
     private LocationClientOption mLocationClientOption = new LocationClientOption();
     private BDLocation mBDLocation;
@@ -29,6 +32,7 @@ public class IndexActivity extends AppCompatActivity {
             if(bdLocation != null && bdLocation.getLocType() != BDLocation.TypeServerError){
                 updateLocationTextView(bdLocation.getLatitude(),bdLocation.getLongitude());
                 mBDLocation = mLocationClient.getLastKnownLocation();
+                mSignupEventList.addSignupEvent(new SignupEvent(mBDLocation));
             }
         }
         @Override public void onLocDiagnosticMessage(int locType,int diagnosticType,String diagnosticMessage){
@@ -79,10 +83,10 @@ public class IndexActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
 
-        // 绑定组件
-        mIndexTextViewLatitude = (TextView) findViewById(R.id.index_TextView_Latitude);
-        mIndexTextViewLongitude = (TextView) findViewById(R.id.index_TextView_Longitude);
-        mIndexButtonSignup = (Button) findViewById(R.id.index_Button_Signup);
+        mIndexTextViewLatitude = findViewById(R.id.index_TextView_Latitude);
+        mIndexTextViewLongitude = findViewById(R.id.index_TextView_Longitude);
+        mIndexButtonSignup = findViewById(R.id.index_Button_Signup);
+        mSignupEventList = SignupEventList.get(getApplicationContext());
 
         mIndexButtonSignup.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
@@ -91,6 +95,23 @@ public class IndexActivity extends AppCompatActivity {
         });
     }
 
+    @Override public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.activity_index,menu);
+        return true;
+    }
+
+    @Override public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case R.id.JumpToLogin:
+                return true;
+            case R.id.JumpToLogView:
+                return true;
+            default:
+                return true;
+        }
+    }
+
+    /* 开始定位 */
     public void startLocate(){
         // 配置百度地图SDK,发起定位请求
         mLocationClient = new LocationClient(getApplicationContext());
@@ -99,7 +120,6 @@ public class IndexActivity extends AppCompatActivity {
         mLocationClientOption.setCoorType("bd0911");
         mLocationClientOption.setScanSpan(1000);
         mLocationClient.start();
-        mLocationClient.requestLocation();
     }
 
     public void updateLocationTextView(double latitude,double longitude){

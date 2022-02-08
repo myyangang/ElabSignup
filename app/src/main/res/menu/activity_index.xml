@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/JumpToLogin"
+        android:icon="@drawable/ic_account_profile"
+        android:title="@string/index_Menu_Login"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/JumpToLogView"
+        android:icon="@drawable/ic_logview"
+        android:title="@string/index_Menu_LogView"
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>

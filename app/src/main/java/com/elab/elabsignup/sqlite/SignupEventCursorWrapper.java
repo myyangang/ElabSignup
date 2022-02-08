@@ -3,7 +3,7 @@ package com.elab.elabsignup.sqlite;
 import android.database.Cursor;
 import android.database.CursorWrapper;
 
-import com.elab.elabsignup.signup.SignupEvent;
+import com.elab.elabsignup.event.SignupEvent;
 
 import java.util.Date;
 import java.util.UUID;
