@@ -10,12 +10,12 @@ public class SignupSubmit {
 
 
     // 最简单的明文传输方法
-    public void send(){
-        Uri url = Uri.parse(API_SUBMIT_URL_TEST)
-                .buildUpon()
-                .appendQueryParameter("API")
-                .build();
-    }
+//    public void send(){
+//        Uri url = Uri.parse(API_SUBMIT_URL_TEST)
+//                .buildUpon()
+//                .appendQueryParameter("API")
+//                .build();
+//    }
 
     // 自己设计的加密方法
 //    public void sendSignUp(){
