@@ -30,9 +30,18 @@ public class SignupEvent {
                 Math.pow(latitude - elabLatitude, 2) + Math.pow(longitude - elabLongitude, 2) < Math.pow(0.0017131271215117582, 2) ? 1 : 0;
     }
 
-
     // 纯用于测试
     public SignupEvent() {
 
     }
+
+    @Override public String toString(){
+        return this.uuid.toString() +
+                "\n经度:" + String.valueOf(this.latitude) +
+                "\n纬度:" + String.valueOf(this.longitude) +
+                "\n日期:" + (this.date).toString() +
+                "\n位置合法:" + String.valueOf(this.isValidLocation) +
+                "\n签到成功:" + String.valueOf(this.isSuccessSubmit);
+    }
+
 }
