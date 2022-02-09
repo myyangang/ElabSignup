@@ -1,7 +1,10 @@
 package com.elab.elabsignup;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -103,8 +106,13 @@ public class IndexActivity extends AppCompatActivity {
     @Override public boolean onOptionsItemSelected(MenuItem menuItem){
         switch (menuItem.getItemId()){
             case R.id.JumpToLogin:
+//                Intent intent = new Intent(IndexActivity.this,LoginActivity.class);
+//                startActivityForResult(
+//                    new Intent()
+//                );
                 return true;
             case R.id.JumpToLogView:
+                startActivity(new Intent(IndexActivity.this,LogViewActivity.class));
                 return true;
             default:
                 return true;
