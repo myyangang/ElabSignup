@@ -11,6 +11,7 @@
     <string name="login_EditText_AccountHint">请输入账户</string>
     <string name="login_EditText_PasswordHint">请输入密码</string>
     <string name="login_Button_Login">登录</string>
+    <string name="login_network_failed">网络连接失败,请检查手机联网功能是否正常</string>
 
     <string name="index_Toast_SuccessWithoutGPS">基站定位成功,GPS定位失败</string>
     <string name="index_Toast_SuccessWithoutWifi">基站定位成功,Wifi定位失败</string>
